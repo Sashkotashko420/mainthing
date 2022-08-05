@@ -1,0 +1,341 @@
+local Executor = {}
+
+function Executor:New()
+	local ProjectOblivion = game.CoreGui["Project Oblivion"]
+	local MainExecutorFrame = Instance.new("Frame")
+	local UICorner = Instance.new("UICorner")
+	local Execute = Instance.new("TextButton")
+	local UICorner_2 = Instance.new("UICorner")
+	local ExecuteButtonBorder = Instance.new("Frame")
+	local UICorner_3 = Instance.new("UICorner")
+	local ScriptHub = Instance.new("TextButton")
+	local UICorner_4 = Instance.new("UICorner")
+	local ClearButtonBorder = Instance.new("Frame")
+	local UICorner_5 = Instance.new("UICorner")
+	local ScriptHubButtonBorder = Instance.new("Frame")
+	local UICorner_6 = Instance.new("UICorner")
+	local Clear = Instance.new("TextButton")
+	local UICorner_7 = Instance.new("UICorner")
+	local TopBar = Instance.new("Frame")
+	local Title = Instance.new("TextLabel")
+	local UICorner_10 = Instance.new("UICorner")
+	local GameTitle = Instance.new("TextLabel")
+	local ScriptBox = Instance.new("TextBox")
+	local UICorner_11 = Instance.new("UICorner")
+	local ScriptBoxBorder = Instance.new("Frame")
+	local UICorner_12 = Instance.new("UICorner")
+	local ScriptHubFrame = Instance.new("Frame")
+	local UICorner_13 = Instance.new("UICorner")
+	local CloseScriptButton = Instance.new("TextButton")
+	local UICorner_14 = Instance.new("UICorner")
+	local ScriptHubTitle = Instance.new("TextLabel")
+	local ButtonHolder = Instance.new("Frame")
+	local UIListLayout_2 = Instance.new("UIListLayout")
+	local DexButton = Instance.new("TextButton")
+	local UICorner_15 = Instance.new("UICorner")
+	local RemoteSpyButton = Instance.new("TextButton")
+	local UICorner_16 = Instance.new("UICorner")
+	local ScriptsHolder = Instance.new("ScrollingFrame")
+	local UICorner_8 = Instance.new("UICorner")
+	local UIListLayout = Instance.new("UIListLayout")
+	local ScriptsHolderBorder = Instance.new("Frame")
+	local UICorner_9 = Instance.new("UICorner")
+
+	MainExecutorFrame.Name = "MainExecutorFrame"
+	MainExecutorFrame.Parent = ProjectOblivion
+	MainExecutorFrame.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+	MainExecutorFrame.Position = UDim2.new(0.313939393, 0, 0.266581625, 0)
+	MainExecutorFrame.Size = UDim2.new(0, 613, 0, 365)
+	MainExecutorFrame.ZIndex = 2
+
+	UICorner.Parent = MainExecutorFrame
+
+	Execute.Name = "Execute"
+	Execute.Parent = MainExecutorFrame
+	Execute.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+	Execute.Position = UDim2.new(0.0114192385, 0, 0.841095865, 0)
+	Execute.Size = UDim2.new(0, 166, 0, 50)
+	Execute.ZIndex = 2
+	Execute.Font = Enum.Font.GothamBold
+	Execute.Text = "Execute"
+	Execute.TextColor3 = Color3.fromRGB(240, 240, 240)
+	Execute.TextSize = 36.000
+	Execute.TextStrokeColor3 = Color3.fromRGB(15, 15, 15)
+	Execute.TextStrokeTransparency = 0.000
+	Execute.TextWrapped = true
+	Execute.MouseButton1Click:Connect(function()
+		pcall(ScriptBox.Text)
+	end)
+
+	UICorner_2.CornerRadius = UDim.new(0, 3)
+	UICorner_2.Parent = Execute
+
+	ExecuteButtonBorder.Name = "ExecuteButtonBorder"
+	ExecuteButtonBorder.Parent = MainExecutorFrame
+	ExecuteButtonBorder.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	ExecuteButtonBorder.BorderSizePixel = 0
+	ExecuteButtonBorder.Position = UDim2.new(0.00861337781, 0, 0.836356163, 0)
+	ExecuteButtonBorder.Size = UDim2.new(0, 170, 0, 54)
+	ExecuteButtonBorder.ZIndex = -1
+
+	UICorner_3.CornerRadius = UDim.new(0, 3)
+	UICorner_3.Parent = ExecuteButtonBorder
+
+	ScriptHub.Name = "ScriptHub"
+	ScriptHub.Parent = MainExecutorFrame
+	ScriptHub.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+	ScriptHub.Position = UDim2.new(0.711000025, 0, 1.11000001, -100)
+	ScriptHub.Size = UDim2.new(0, 166, 0, 50)
+	ScriptHub.ZIndex = 2
+	ScriptHub.Font = Enum.Font.GothamBold
+	ScriptHub.Text = "Script Hub"
+	ScriptHub.TextColor3 = Color3.fromRGB(240, 240, 240)
+	ScriptHub.TextSize = 34.000
+	ScriptHub.TextStrokeColor3 = Color3.fromRGB(15, 15, 15)
+	ScriptHub.TextStrokeTransparency = 0.000
+	ScriptHub.TextWrapped = true
+	ScriptHub.MouseButton1Click:Connect(function()
+		ScriptHubFrame.Visible = true
+	end)
+
+	UICorner_4.CornerRadius = UDim.new(0, 3)
+	UICorner_4.Parent = ScriptHub
+
+	ClearButtonBorder.Name = "ClearButtonBorder"
+	ClearButtonBorder.Parent = MainExecutorFrame
+	ClearButtonBorder.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	ClearButtonBorder.BorderSizePixel = 0
+	ClearButtonBorder.Position = UDim2.new(0.3006199, 0, 0.836356163, 0)
+	ClearButtonBorder.Size = UDim2.new(0, 170, 0, 54)
+	ClearButtonBorder.ZIndex = -1
+
+	UICorner_5.CornerRadius = UDim.new(0, 3)
+	UICorner_5.Parent = ClearButtonBorder
+
+	ScriptHubButtonBorder.Name = "ScriptHubButtonBorder"
+	ScriptHubButtonBorder.Parent = MainExecutorFrame
+	ScriptHubButtonBorder.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	ScriptHubButtonBorder.BorderSizePixel = 0
+	ScriptHubButtonBorder.Position = UDim2.new(0.707198977, 0, 1.10410964, -100)
+	ScriptHubButtonBorder.Size = UDim2.new(0, 170, 0, 54)
+	ScriptHubButtonBorder.ZIndex = -1
+
+	UICorner_6.CornerRadius = UDim.new(0, 3)
+	UICorner_6.Parent = ScriptHubButtonBorder
+
+	Clear.Name = "Clear"
+	Clear.Parent = MainExecutorFrame
+	Clear.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+	Clear.Position = UDim2.new(0.303425789, 0, 0.841095865, 0)
+	Clear.Size = UDim2.new(0, 166, 0, 50)
+	Clear.ZIndex = 2
+	Clear.Font = Enum.Font.GothamBold
+	Clear.Text = "Clear"
+	Clear.TextColor3 = Color3.fromRGB(240, 240, 240)
+	Clear.TextSize = 36.000
+	Clear.TextStrokeColor3 = Color3.fromRGB(15, 15, 15)
+	Clear.TextStrokeTransparency = 0.000
+	Clear.TextWrapped = true
+	Clear.MouseButton1Click:Connect(function()
+		ScriptBox.Text = ""
+	end)
+
+	UICorner_7.CornerRadius = UDim.new(0, 3)
+	UICorner_7.Parent = Clear
+
+	ScriptsHolder.Name = "ScriptsHolder"
+	ScriptsHolder.Parent = MainExecutorFrame
+	ScriptsHolder.Active = true
+	ScriptsHolder.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+	ScriptsHolder.BorderSizePixel = 0
+	ScriptsHolder.Position = UDim2.new(0.713999987, 0, 0.125589028, 0)
+	ScriptsHolder.Size = UDim2.new(0, 161, 0, 250)
+
+	UIListLayout.Parent = ScriptsHolder
+	UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+	UIListLayout.Padding = UDim.new(0, 3)
+
+	ScriptsHolderBorder.Name = "ScriptsHolderBorder"
+	ScriptsHolderBorder.Parent = MainExecutorFrame
+	ScriptsHolderBorder.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	ScriptsHolderBorder.BorderSizePixel = 0
+	ScriptsHolderBorder.Position = UDim2.new(0.708999991, 0, 0.116999999, 0)
+	ScriptsHolderBorder.Size = UDim2.new(0, 169, 0, 256)
+	ScriptsHolderBorder.ZIndex = 0
+
+	UICorner_9.CornerRadius = UDim.new(0, 2)
+	UICorner_9.Parent = ScriptsHolderBorder
+
+	TopBar.Name = "TopBar"
+	TopBar.Parent = MainExecutorFrame
+	TopBar.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+	TopBar.BorderSizePixel = 0
+	TopBar.Size = UDim2.new(0, 613, 0, 40)
+	TopBar.ZIndex = 0
+
+	Title.Name = "Title"
+	Title.Parent = TopBar
+	Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Title.BackgroundTransparency = 1.000
+	Title.Position = UDim2.new(0.336052209, 0, -0.075000003, 0)
+	Title.Size = UDim2.new(0, 200, 0, 43)
+	Title.Font = Enum.Font.GothamBold
+	Title.Text = "Project Oblivion"
+	Title.TextColor3 = Color3.fromRGB(240, 240, 240)
+	Title.TextScaled = true
+	Title.TextSize = 14.000
+	Title.TextStrokeColor3 = Color3.fromRGB(15, 15, 15)
+	Title.TextStrokeTransparency = 0.000
+	Title.TextWrapped = true
+
+	UICorner_10.Parent = TopBar
+
+	GameTitle.Name = "GameTitle"
+	GameTitle.Parent = TopBar
+	GameTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	GameTitle.BackgroundTransparency = 1.000
+	GameTitle.Position = UDim2.new(0.750407815, 0, -0.075000003, 0)
+	GameTitle.Size = UDim2.new(0, 153, 0, 43)
+	GameTitle.Font = Enum.Font.GothamBold
+	GameTitle.Text = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+	GameTitle.TextColor3 = Color3.fromRGB(240, 240, 240)
+	GameTitle.TextScaled = true
+	GameTitle.TextSize = 14.000
+	GameTitle.TextStrokeColor3 = Color3.fromRGB(15, 15, 15)
+	GameTitle.TextStrokeTransparency = 0.000
+	GameTitle.TextWrapped = true
+
+	ScriptBox.Name = "ScriptBox"
+	ScriptBox.Parent = MainExecutorFrame
+	ScriptBox.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+	ScriptBox.Position = UDim2.new(0.0228939578, 0, 0.142438322, 0)
+	ScriptBox.Size = UDim2.new(0, 402, 0, 237)
+	ScriptBox.Font = Enum.Font.SourceSans
+	ScriptBox.Text = "-- Made By rizz god"
+	ScriptBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+	ScriptBox.TextSize = 18.000
+	ScriptBox.TextWrapped = true
+	ScriptBox.TextXAlignment = Enum.TextXAlignment.Left
+	ScriptBox.TextYAlignment = Enum.TextYAlignment.Top
+
+	UICorner_11.Parent = ScriptBox
+
+	ScriptBoxBorder.Name = "ScriptBoxBorder"
+	ScriptBoxBorder.Parent = MainExecutorFrame
+	ScriptBoxBorder.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	ScriptBoxBorder.Position = UDim2.new(0.0109999692, 0, 0.119999968, 0)
+	ScriptBoxBorder.Size = UDim2.new(0, 416, 0, 254)
+	ScriptBoxBorder.ZIndex = 0
+
+	UICorner_12.Parent = ScriptBoxBorder
+
+	ScriptHubFrame.Name = "ScriptHubFrame"
+	ScriptHubFrame.Parent = ProjectOblivion
+	ScriptHubFrame.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+	ScriptHubFrame.Position = UDim2.new(0.184848487, 0, 0.266581625, 0)
+	ScriptHubFrame.Size = UDim2.new(0, 204, 0, 365)
+	ScriptHubFrame.Visible = false
+
+	UICorner_13.Parent = ScriptHubFrame
+
+	CloseScriptButton.Name = "CloseScriptButton"
+	CloseScriptButton.Parent = ScriptHubFrame
+	CloseScriptButton.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+	CloseScriptButton.Position = UDim2.new(0.772549033, 0, 0, 0)
+	CloseScriptButton.Size = UDim2.new(0, 46, 0, 40)
+	CloseScriptButton.Font = Enum.Font.SourceSans
+	CloseScriptButton.Text = "X"
+	CloseScriptButton.TextColor3 = Color3.fromRGB(240, 240, 240)
+	CloseScriptButton.TextScaled = true
+	CloseScriptButton.TextSize = 14.000
+	CloseScriptButton.TextWrapped = true
+	CloseScriptButton.MouseButton1Click:Connect(function()
+		ScriptHubFrame.Visible = false
+	end)
+
+	UICorner_14.Parent = CloseScriptButton
+
+	ScriptHubTitle.Name = "ScriptHubTitle"
+	ScriptHubTitle.Parent = ScriptHubFrame
+	ScriptHubTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	ScriptHubTitle.BackgroundTransparency = 1.000
+	ScriptHubTitle.Size = UDim2.new(0, 157, 0, 40)
+	ScriptHubTitle.Font = Enum.Font.SourceSans
+	ScriptHubTitle.Text = "Script Hub"
+	ScriptHubTitle.TextColor3 = Color3.fromRGB(240, 240, 240)
+	ScriptHubTitle.TextScaled = true
+	ScriptHubTitle.TextSize = 14.000
+	ScriptHubTitle.TextWrapped = true
+
+	ButtonHolder.Name = "ButtonHolder"
+	ButtonHolder.Parent = ScriptHubFrame
+	ButtonHolder.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	ButtonHolder.BackgroundTransparency = 1.000
+	ButtonHolder.Position = UDim2.new(0, 0, 0.117000043, 0)
+	ButtonHolder.Size = UDim2.new(0, 203, 0, 322)
+
+	UIListLayout_2.Parent = ButtonHolder
+	UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+	UIListLayout_2.Padding = UDim.new(0, 3)
+
+	DexButton.Name = "DexButton"
+	DexButton.Parent = ButtonHolder
+	DexButton.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+	DexButton.Size = UDim2.new(0, 204, 0, 36)
+	DexButton.Font = Enum.Font.SourceSans
+	DexButton.Text = "Dark Dex v4"
+	DexButton.TextColor3 = Color3.fromRGB(240, 240, 240)
+	DexButton.TextScaled = true
+	DexButton.TextSize = 14.000
+	DexButton.TextWrapped = true
+	DexButton.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet('https://gist.githubusercontent.com/DinosaurXxX/b757fe011e7e600c0873f967fe427dc2/raw/ee5324771f017073fc30e640323ac2a9b3bfc550/dark%2520dex%2520v4'))()
+	end)
+
+	UICorner_15.Parent = DexButton
+
+	RemoteSpyButton.Name = "RemoteSpyButton"
+	RemoteSpyButton.Parent = ButtonHolder
+	RemoteSpyButton.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+	RemoteSpyButton.Size = UDim2.new(0, 204, 0, 36)
+	RemoteSpyButton.Font = Enum.Font.SourceSans
+	RemoteSpyButton.Text = "Simple Spy v2"
+	RemoteSpyButton.TextColor3 = Color3.fromRGB(240, 240, 240)
+	RemoteSpyButton.TextScaled = true
+	RemoteSpyButton.TextSize = 14.000
+	RemoteSpyButton.TextWrapped = true
+	RemoteSpyButton.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://github.com/exxtremestuffs/SimpleSpySource/raw/master/SimpleSpy.lua"))()
+	end)
+
+	UICorner_16.Parent = RemoteSpyButton
+	
+	local Holder = {}
+	
+	function Holder:Script(name, callback)
+		local ScriptButton = Instance.new("TextButton")
+
+		ScriptButton.Name = "ScriptButton"
+		ScriptButton.Parent = ScriptsHolder
+		ScriptButton.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+		ScriptButton.Size = UDim2.new(0, 151, 0, 31)
+		ScriptButton.Font = Enum.Font.GothamBold
+		if name == nil then
+			ScriptButton.Text = "Script Button"
+		else
+			ScriptButton.Text = name
+		end
+		ScriptButton.TextColor3 = Color3.fromRGB(240, 240, 240)
+		ScriptButton.TextScaled = true
+		ScriptButton.TextSize = 14.000
+		ScriptButton.TextWrapped = true
+		ScriptButton.MouseButton1Click:Connect(function()
+			pcall(callback)
+		end)
+		
+		UICorner_8.Parent = ScriptButton
+	end
+	return Holder
+end
+
+return Executor
