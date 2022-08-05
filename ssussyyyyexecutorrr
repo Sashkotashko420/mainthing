@@ -339,3 +339,9 @@ function Executor:New()
 end
 
 return Executor
+
+local main = executor:New()
+
+local amogus = main:Script("amoguss", function()
+	print('sus')
+end)
