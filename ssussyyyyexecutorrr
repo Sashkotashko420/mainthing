@@ -1,7 +1,7 @@
 local Executor = {}
 
 function Executor:New()
-	local ProjectOblivion = game.CoreGui["Project Oblivion"]
+	local ProjectOblivion = Instance.new("ScreenGui")
 	local MainExecutorFrame = Instance.new("Frame")
 	local UICorner = Instance.new("UICorner")
 	local Execute = Instance.new("TextButton")
@@ -40,6 +40,10 @@ function Executor:New()
 	local UIListLayout = Instance.new("UIListLayout")
 	local ScriptsHolderBorder = Instance.new("Frame")
 	local UICorner_9 = Instance.new("UICorner")
+
+	ProjectOblivion.Name = "Project Oblivion"
+	ProjectOblivion.Parent = game.CoreGui
+	ProjectOblivion.ZIndexBehaviour = Enum.ZIndexBehaviour.Sibling
 
 	MainExecutorFrame.Name = "MainExecutorFrame"
 	MainExecutorFrame.Parent = ProjectOblivion
