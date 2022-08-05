@@ -1,0 +1,75 @@
+local ProjectOblivion = game.CoreGui["Project Oblivion"]
+local LoadingFrame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local GameLabel = Instance.new("TextLabel")
+local LoadingBarBackGround = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local LoadingLabel = Instance.new("TextLabel")
+local LoadingBar = Instance.new("Frame")
+local UICorner_3 = Instance.new("UICorner")
+
+LoadingFrame.Name = "LoadingFrame"
+LoadingFrame.Parent = ProjectOblivion
+LoadingFrame.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+LoadingFrame.BorderSizePixel = 0
+LoadingFrame.Position = UDim2.new(0.398181796, 0, 0.380102038, 0)
+LoadingFrame.Size = UDim2.new(0, 336, 0, 187)
+
+UICorner.Parent = LoadingFrame
+
+GameLabel.Name = "GameLabel"
+GameLabel.Parent = LoadingFrame
+GameLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GameLabel.BackgroundTransparency = 1.000
+GameLabel.Position = UDim2.new(0.199404761, 0, 0.0962566808, 0)
+GameLabel.Size = UDim2.new(0, 200, 0, 50)
+GameLabel.Font = Enum.Font.SourceSans
+GameLabel.Text = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+GameLabel.TextColor3 = Color3.fromRGB(240, 240, 240)
+GameLabel.TextScaled = true
+GameLabel.TextSize = 14.000
+GameLabel.TextWrapped = true
+
+LoadingBarBackGround.Name = "LoadingBarBackGround"
+LoadingBarBackGround.Parent = LoadingFrame
+LoadingBarBackGround.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+LoadingBarBackGround.Position = UDim2.new(0.0773809552, 0, 0.71657759, 0)
+LoadingBarBackGround.Size = UDim2.new(0, 283, 0, 21)
+LoadingBarBackGround.ZIndex = 0
+
+UICorner_2.Parent = LoadingBarBackGround
+
+LoadingLabel.Name = "LoadingLabel"
+LoadingLabel.Parent = LoadingFrame
+LoadingLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LoadingLabel.BackgroundTransparency = 1.000
+LoadingLabel.Position = UDim2.new(0.199404761, 0, 0.368983954, 0)
+LoadingLabel.Size = UDim2.new(0, 200, 0, 50)
+LoadingLabel.Font = Enum.Font.SourceSans
+LoadingLabel.TextColor3 = Color3.fromRGB(240, 240, 240)
+LoadingLabel.TextScaled = true
+LoadingLabel.TextSize = 14.000
+LoadingLabel.TextWrapped = true
+while wait(.75) and LoadingLabel do
+	LoadingLabel.Text = "Loading"
+	wait(.25)
+	LoadingLabel.Text = "Loading."
+	wait(.25)
+	LoadingLabel.Text = "Loading.."
+	wait(.25)
+	LoadingLabel.Text = "Loading..."
+end
+
+LoadingBar.Name = "LoadingBar"
+LoadingBar.Parent = LoadingFrame
+LoadingBar.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+LoadingBar.Position = UDim2.new(0.095238097, 0, 0.732620299, 0)
+LoadingBar.Size = UDim2.new(0, 1, 0, 14)
+
+local lbts = LoadingBar:TweenSize(UDim2.new(0, 271,0, 14), Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 1, false, callback)
+
+if lbts then
+	LoadingFrame.Visible = false
+end
+
+UICorner_3.Parent = LoadingBar
