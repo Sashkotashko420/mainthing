@@ -1,0 +1,96 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ProjectOblivion = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local avatarpic = Instance.new("ImageLabel")
+local UICorner = Instance.new("UICorner")
+local welcomelabel = Instance.new("TextLabel")
+local ProjectOblivion_2 = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local Executor = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local UICorner_4 = Instance.new("UICorner")
+
+--Properties:
+
+ProjectOblivion.Name = "Project Oblivion"
+ProjectOblivion.Parent = game.CoreGui
+ProjectOblivion.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = ProjectOblivion
+MainFrame.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+MainFrame.Position = UDim2.new(0.339848667, 0, 0.200255066, 0)
+MainFrame.Size = UDim2.new(0.319672137, 0, 0.646683812, 0)
+
+avatarpic.Name = "avatarpic"
+avatarpic.Parent = MainFrame
+avatarpic.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+avatarpic.BorderSizePixel = 0
+avatarpic.Position = UDim2.new(0.054744564, 0, 0.040145956, 0)
+avatarpic.Size = UDim2.new(0.439619184, 0, 0.439619154, 0)
+avatarpic.ScaleType = Enum.ScaleType.Fit
+local Players = game:GetService("Players")
+
+local player = Players.LocalPlayer
+
+local userId = player.UserId
+local thumbType = Enum.ThumbnailType.HeadShot
+local thumbSize = Enum.ThumbnailSize.Size420x420
+local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
+avatarpic.Image = content
+
+UICorner.Parent = avatarpic
+
+welcomelabel.Name = "welcomelabel"
+welcomelabel.Parent = MainFrame
+welcomelabel.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+welcomelabel.BackgroundTransparency = 1.000
+welcomelabel.BorderColor3 = Color3.fromRGB(27, 42, 53)
+welcomelabel.Position = UDim2.new(0.510142922, 0, 0.0424436219, 0)
+welcomelabel.Size = UDim2.new(0.473178118, 0, 0.24634406, 0)
+welcomelabel.Font = Enum.Font.Code
+welcomelabel.Text = "Welcome, "..game.Players.LocalPlayer.Name
+welcomelabel.TextColor3 = Color3.fromRGB(240, 240, 240)
+welcomelabel.TextScaled = true
+welcomelabel.TextSize = 14.000
+welcomelabel.TextWrapped = true
+
+ProjectOblivion_2.Name = "ProjectOblivion"
+ProjectOblivion_2.Parent = MainFrame
+ProjectOblivion_2.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+ProjectOblivion_2.Position = UDim2.new(0.135036498, 0, 0.531047046, 0)
+ProjectOblivion_2.Size = UDim2.new(0.729927003, 0, 0.182481751, 0)
+ProjectOblivion_2.Font = Enum.Font.Code
+ProjectOblivion_2.Text = "Oblivion Hub"
+ProjectOblivion_2.TextColor3 = Color3.fromRGB(240, 240, 240)
+ProjectOblivion_2.TextScaled = true
+ProjectOblivion_2.TextSize = 14.000
+ProjectOblivion_2.TextWrapped = true
+ProjectOblivion_2.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/projectoblivionmain/mainmainmain/main/mainmainmainmain'))()
+end)
+
+UICorner_2.Parent = ProjectOblivion_2
+
+Executor.Name = "Executor"
+Executor.Parent = MainFrame
+Executor.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Executor.Position = UDim2.new(0.135036498, 0, 0.763846278, 0)
+Executor.Size = UDim2.new(0.729927003, 0, 0.182481751, 0)
+Executor.Font = Enum.Font.Code
+Executor.Text = "Project Oblivion Executor"
+Executor.TextColor3 = Color3.fromRGB(240, 240, 240)
+Executor.TextScaled = true
+Executor.TextSize = 14.000
+Executor.TextWrapped = true
+Executor.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet(''))()
+end)
+
+UICorner_3.Parent = Executor
+
+UICorner_4.Parent = MainFrame
